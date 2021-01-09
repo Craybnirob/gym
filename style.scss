@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster Two', cursive;
+}
+
+/*
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), #000), url(../image2/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+}
+*/
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+}
+
+section video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .logo span {
+    color: #ff0157;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-right: 40px;
+}
+
+header .navigation li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+header .navigation li a:hover {
+    color: #ff0157;
+}
+
+section .content {
+    max-width: 600px;
+}
+
+section .content h1 {
+    color: #fff;
+    font-size: 4em;
+    line-height: 1em;
+}
+
+section .content h1 span {
+    color: #ff0157;
+}
+
+section .content p {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0;
+}
+
+section .content a {
+    display: inline-block;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 25px;
+    border: 0.5px solid #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+section .content a:hover {
+    color: #ff0157;
+    letter-spacing: 2px;
+}
+
+.sci {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+}
+
+.sci li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li a {
+    display: inline-block;
+    filter: invert(1);
+    transform: scale(0.5);
+    margin-right: 20px;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    section {
+        padding: 40px;
+        // background: url(../image2/bg.jpg);
+        // background-position: center;
+        // background-size: cover;
+    }
+    
+    section video#demo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: -11;
+    }
+
+    section .content h1 {
+        font-size: 2em;
+    }
+
+    section .content p {
+        font-size: 0.9em;
+    }
+
+    header .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        background: #000;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    header .navigation li a {
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    .toggleMenu {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        background: url(../image2/other/menu.png);
+        background-size: cover;
+        background-position: center;
+        z-index: 11;
+    }
+
+    .toggleMenu.active {
+        width: 20px;
+        height: 20px;
+        background: url(../image2/other/close.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+}
